@@ -1,10 +1,8 @@
 #include "color.h"
 #include "stb_image.h"
 #include <cmath>
-#include <cstdlib>
 #include <algorithm>
-#include <numeric>
-#include <random>
+#include <vector>
 
 namespace tmosaic {
 
@@ -49,7 +47,6 @@ Color3 compute_dominant_color(const std::filesystem::path& file, int k) {
     // Initialize centroids with first k samples
     k = std::min(k, static_cast<int>(samples.size()));
     std::vector<Pixel> centroids(k);
-    std::mt19937 rng(42);
     for (int i = 0; i < k; i++) {
         centroids[i] = samples[i * samples.size() / k];
     }
