@@ -1,2 +1,0 @@
-/usr/bin/ar qc libtinyexif.a CMakeFiles/tinyexif.dir/third_party/TinyEXIF/TinyEXIF.cpp.o
-/usr/bin/ranlib libtinyexif.a
