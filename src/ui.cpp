@@ -10,13 +10,20 @@
 #include <cmath>
 
 #ifdef _WIN32
-#include <GL/gl.h>
+  #ifndef WIN32_LEAN_AND_MEAN
+  #define WIN32_LEAN_AND_MEAN
+  #endif
+  #ifndef NOMINMAX
+  #define NOMINMAX
+  #endif
+  #include <Windows.h>
+  #include <GL/gl.h>
 #else
-#ifdef __APPLE__
-#include <OpenGL/gl.h>
-#else
-#include <GL/gl.h>
-#endif
+  #ifdef __APPLE__
+    #include <OpenGL/gl.h>
+  #else
+    #include <GL/gl.h>
+  #endif
 #endif
 
 namespace tmosaic {
