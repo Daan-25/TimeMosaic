@@ -1,0 +1,17 @@
+build/
+_codeql_build_dir/
+_codeql_detected_source_root
+cmake-build-*/
+.vscode/
+.idea/
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
