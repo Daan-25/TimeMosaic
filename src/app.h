@@ -9,7 +9,7 @@
 #include <filesystem>
 #include <map>
 
-namespace tm {
+namespace tmosaic {
 
 // Application-wide settings
 struct Settings {
@@ -85,4 +85,4 @@ private:
     std::thread worker_;
 };
 
-} // namespace tm
+} // namespace tmosaic

@@ -5,7 +5,7 @@
 #include <map>
 #include <filesystem>
 
-namespace tm {
+namespace tmosaic {
 
 // Data for a single day
 struct DayData {
@@ -41,4 +41,4 @@ int days_in_month(int year, int month);
 // Advance date by 1 day
 CalendarDate next_day(const CalendarDate& d);
 
-} // namespace tm
+} // namespace tmosaic

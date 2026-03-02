@@ -4,7 +4,7 @@
 #include <cstdint>
 #include <string>
 
-namespace tm {
+namespace tmosaic {
 
 // Render the calendar-heatmap mosaic to a pixel buffer (RGBA).
 // Returns pixel data; sets out_w, out_h.
@@ -24,4 +24,4 @@ std::vector<uint8_t> export_linear_png(const MosaicModel& model,
 // Write RGBA buffer to PNG file. Returns true on success.
 bool write_png(const std::string& path, const uint8_t* data, int w, int h);
 
-} // namespace tm
+} // namespace tmosaic

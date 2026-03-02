@@ -4,7 +4,7 @@
 #include <atomic>
 #include <filesystem>
 
-namespace tm {
+namespace tmosaic {
 
 struct ScanResult {
     std::vector<std::filesystem::path> files;
@@ -29,4 +29,4 @@ ScanResult scan_folder(const std::filesystem::path& root,
                        std::atomic<bool>& cancel,
                        std::atomic<int>& progress);
 
-} // namespace tm
+} // namespace tmosaic

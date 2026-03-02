@@ -6,7 +6,7 @@
 #include <numeric>
 #include <random>
 
-namespace tm {
+namespace tmosaic {
 
 Color3 compute_average_color(const std::filesystem::path& file, bool fast) {
     int w, h, ch;
@@ -94,4 +94,4 @@ Color3 compute_dominant_color(const std::filesystem::path& file, int k) {
             static_cast<uint8_t>(std::clamp(centroids[best_c].b, 0.f, 255.f))};
 }
 
-} // namespace tm
+} // namespace tmosaic

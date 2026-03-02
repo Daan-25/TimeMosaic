@@ -4,7 +4,7 @@
 #include "color.h"
 #include <algorithm>
 
-namespace tm {
+namespace tmosaic {
 
 App::App() = default;
 
@@ -121,4 +121,4 @@ void App::scan_worker(std::string folder) {
     scanning_.store(false);
 }
 
-} // namespace tm
+} // namespace tmosaic

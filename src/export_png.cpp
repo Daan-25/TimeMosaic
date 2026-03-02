@@ -2,7 +2,7 @@
 #include "stb_image_write.h"
 #include <cstring>
 
-namespace tm {
+namespace tmosaic {
 
 static void fill_cell(std::vector<uint8_t>& buf, int img_w, int cx, int cy, int cell, Color3 col) {
     for (int dy = 0; dy < cell; dy++) {
@@ -135,4 +135,4 @@ bool write_png(const std::string& path, const uint8_t* data, int w, int h) {
     return stbi_write_png(path.c_str(), w, h, 4, data, w * 4) != 0;
 }
 
-} // namespace tm
+} // namespace tmosaic

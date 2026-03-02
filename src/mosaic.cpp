@@ -2,7 +2,7 @@
 #include <ctime>
 #include <cmath>
 
-namespace tm {
+namespace tmosaic {
 
 static bool is_leap(int y) {
     return (y % 4 == 0 && y % 100 != 0) || (y % 400 == 0);
@@ -50,4 +50,4 @@ int week_number(const CalendarDate& d) {
     return (yday + jan1_dow) / 7;
 }
 
-} // namespace tm
+} // namespace tmosaic

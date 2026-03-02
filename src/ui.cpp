@@ -19,7 +19,7 @@
 #endif
 #endif
 
-namespace tm {
+namespace tmosaic {
 
 // Helper: upload RGBA pixels to an OpenGL texture
 static unsigned int upload_texture(const uint8_t* data, int w, int h) {
@@ -222,7 +222,7 @@ static void draw_inspector(App& app) {
             ImGui::BeginGroup();
             if (ImGui::ImageButton(
                     (std::string("##thumb_") + f.string()).c_str(),
-                    reinterpret_cast<ImTextureID>(static_cast<intptr_t>(te.tex_id)),
+                    static_cast<ImTextureID>(te.tex_id),
                     ImVec2(static_cast<float>(te.w), static_cast<float>(te.h)))) {
                 app.preview_file = f;
                 app.show_preview = true;
@@ -262,7 +262,7 @@ static void draw_preview(App& app) {
         float scale = std::min(avail.x / app.preview_w, avail.y / app.preview_h);
         scale = std::min(scale, 1.0f);
         ImGui::Image(
-            reinterpret_cast<ImTextureID>(static_cast<intptr_t>(app.preview_tex)),
+            static_cast<ImTextureID>(app.preview_tex),
             ImVec2(app.preview_w * scale, app.preview_h * scale));
     }
     ImGui::End();
@@ -410,4 +410,4 @@ void render_ui(App& app) {
     draw_preview(app);
 }
 
-} // namespace tm
+} // namespace tmosaic

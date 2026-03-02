@@ -3,7 +3,7 @@
 #include <fstream>
 #include <algorithm>
 
-namespace tm {
+namespace tmosaic {
 
 std::string exif_date(const std::filesystem::path& file) {
     // Only attempt on JPEG files
@@ -22,4 +22,4 @@ std::string exif_date(const std::filesystem::path& file) {
     return {};
 }
 
-} // namespace tm
+} // namespace tmosaic

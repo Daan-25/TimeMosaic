@@ -1,7 +1,7 @@
 #include "scan.h"
 #include <algorithm>
 
-namespace tm {
+namespace tmosaic {
 
 ScanResult scan_folder(const std::filesystem::path& root,
                        std::atomic<bool>& cancel,
@@ -25,4 +25,4 @@ ScanResult scan_folder(const std::filesystem::path& root,
     return result;
 }
 
-} // namespace tm
+} // namespace tmosaic

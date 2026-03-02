@@ -10,7 +10,7 @@
 #include <cstring>
 
 // Drag-and-drop callback
-static tm::App* g_app = nullptr;
+static tmosaic::App* g_app = nullptr;
 
 static void drop_callback(GLFWwindow* /*window*/, int count, const char** paths) {
     if (g_app && count > 0) {
@@ -62,7 +62,7 @@ int main(int /*argc*/, char** /*argv*/) {
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init(glsl_version);
 
-    tm::App app;
+    tmosaic::App app;
     g_app = &app;
 
     while (!glfwWindowShouldClose(window)) {
@@ -72,7 +72,7 @@ int main(int /*argc*/, char** /*argv*/) {
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
 
-        tm::render_ui(app);
+        tmosaic::render_ui(app);
 
         ImGui::Render();
         int display_w, display_h;

@@ -1,8 +1,8 @@
 #pragma once
 
-namespace tm {
+namespace tmosaic {
 class App;
 
 void render_ui(App& app);
 
-} // namespace tm
+} // namespace tmosaic

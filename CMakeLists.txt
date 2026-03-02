@@ -53,6 +53,7 @@ add_library(tinyexif STATIC
 target_include_directories(tinyexif PUBLIC
     ${CMAKE_SOURCE_DIR}/third_party/TinyEXIF
 )
+target_compile_definitions(tinyexif PRIVATE TINYEXIF_NO_XMP_SUPPORT)
 
 # ── stb (header-only, implementation compiled once) ─────────────
 add_library(stb_impl STATIC

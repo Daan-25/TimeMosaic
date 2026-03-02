@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <cstring>
 
-namespace tm {
+namespace tmosaic {
 
 std::vector<uint8_t> load_thumbnail(const std::filesystem::path& file, int size, int& out_w, int& out_h) {
     int w, h, ch;
@@ -54,4 +54,4 @@ std::vector<uint8_t> load_image_rgba(const std::filesystem::path& file, int& out
     return result;
 }
 
-} // namespace tm
+} // namespace tmosaic

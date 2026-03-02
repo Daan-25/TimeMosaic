@@ -4,7 +4,7 @@
 #include <ctime>
 #include <chrono>
 
-namespace tm {
+namespace tmosaic {
 
 CalendarDate parse_exif_date(const std::string& s) {
     CalendarDate d;
@@ -82,4 +82,4 @@ CalendarDate best_date_for_file(const std::filesystem::path& file) {
     return date_from_file_time(file);
 }
 
-} // namespace tm
+} // namespace tmosaic

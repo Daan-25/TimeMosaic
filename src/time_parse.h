@@ -3,7 +3,7 @@
 #include <chrono>
 #include <filesystem>
 
-namespace tm {
+namespace tmosaic {
 
 // Represents a calendar date (year, month, day).
 struct CalendarDate {
@@ -35,4 +35,4 @@ CalendarDate date_from_file_time(const std::filesystem::path& file);
 // 1) EXIF DateTimeOriginal  2) filename pattern  3) last-write-time
 CalendarDate best_date_for_file(const std::filesystem::path& file);
 
-} // namespace tm
+} // namespace tmosaic
